@@ -1,1 +1,1 @@
-Put these two folders within your e2e folder in Cypress to run them.
+Put these two folders within your test folder in Cypress to run them.
