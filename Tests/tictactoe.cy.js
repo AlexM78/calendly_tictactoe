@@ -19,7 +19,7 @@ describe('Testing TicTacToe Webapp', function() {
     element.getMiddleLeft().click();
     element.getCenter().click();
     element.getBottomLeft().click();
-    element.getWinMessage().contains('Congratulations player X!').should('not.exist')
+    element.getWinMessage().contains('Congratulations player X!').should('exist')
   })  
 
   //Assert we get the correct winning message when O wins
@@ -32,7 +32,7 @@ describe('Testing TicTacToe Webapp', function() {
     element.getUpperRight().click();
     element.getMiddleLeft().click();
     element.getCenter().click();
-    element.getWinMessage().contains('Congratulations player O!').should('not.exist')
+    element.getWinMessage().contains('Congratulations player O!').should('exist')
   }) 
 
   //Assert we get an error message when invalid data is entered into the text box
@@ -52,7 +52,7 @@ describe('Testing TicTacToe Webapp', function() {
   it('Remove inputs after clicking play button', function () {
     element.getInputBox().type('3');
     element.getPlayButton().click();
-    element.getInputBox().should('exist');
-    element.getPlayButton().should('exist');
+    element.getInputBox().should('not.exist');
+    element.getPlayButton().should('not.exist');
   })
 })
